@@ -1,20 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { SafeAreaView } from "react-native";
+import { singupStyles } from "./src/screens/front-screen/Singup/singup-screen.styles";
+import { Singup } from "./src/screens/front-screen/Singup/singup-screen.screens";
+import LoginScreen from "./src/screens/front-screen/login/login-screen.screens";
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <SafeAreaView style={singupStyles.container}>
+      <LoginScreen />
+    </SafeAreaView>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
