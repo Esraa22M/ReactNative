@@ -22,6 +22,9 @@ export const userCardStyle = StyleSheet.create({
     textTransform: "uppercase",
     color: UserAuthColors.GOLDEN_COLOR,
     textAlign: "center",
+    fontStyle: "italic",
+    fontWeight: "bold",
+    letterSpacing: 2,
   },
-  cardInfo: { fontSize: 25, color: "white", textAlign: "center" },
+  cardInfo: { fontSize: 18, color: "white", textAlign: "center" },
 });
