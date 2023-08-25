@@ -1,8 +1,9 @@
 import React, { useEffect } from "react";
-import { View, Text, Image } from "react-native";
+import { View, Text, ImageBackground } from "react-native";
 import { getUserInfo } from "../../../authentication/api/login-info";
 import { useState } from "react";
-const LoginScreen = () => {
+import { userCardStyle } from "./user-card.styles";
+const UserCard = () => {
   const [userData, setUserData] = useState({});
 
   useEffect(() => {
@@ -16,16 +17,19 @@ const LoginScreen = () => {
   return (
     <>
       {userData && (
-        <View>
-          <Text>{name}</Text>
-          <Image
-            style={{ width: "100%", height: "50%" }}
+        <View style={userCardStyle.container}>
+          <ImageBackground
+            style={userCardStyle.imageStyle}
             source={{
               uri: avatar_url,
             }}
             resizeMode="contain"
-          />
-          <Text>{location}</Text>
+          >
+            <View style={userCardStyle.cardBody}>
+              <Text style={userCardStyle.cardHeader}>{name}</Text>
+              <Text style={userCardStyle.cardInfo}>{location}</Text>
+            </View>
+          </ImageBackground>
         </View>
       )}
     </>
@@ -34,4 +38,4 @@ const LoginScreen = () => {
 
 // #endregion
 
-export default LoginScreen;
+export default UserCard;

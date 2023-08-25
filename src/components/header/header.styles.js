@@ -1,5 +1,5 @@
 import { StyleSheet } from "react-native";
-import { SingupFormColors } from "../../colors/front-screen-colors/singup-screen.colors";
+import { UserAuthColors } from "../../colors/front-screen-colors/user-auth-colors";
 export const headerStyle = StyleSheet.create({
   headerContainer: {
     justifyContent: "center",
@@ -14,6 +14,6 @@ export const headerStyle = StyleSheet.create({
     fontWeight: "bold",
     fontSize: 45,
     letterSpacing: 2,
-    color: SingupFormColors.HEADER_COLOR,
+    color: UserAuthColors.HEADER_COLOR,
   },
 });
